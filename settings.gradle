@@ -1,0 +1,1 @@
+include ':app', ':feature_search', ':network', ':base', ':feature_showmsg', ':feature_search2'

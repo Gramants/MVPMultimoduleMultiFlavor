@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "net.stefano.fruitveg.cucumber.CucumberTestRunner"
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':network')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.test.espresso:espresso-idling-resource:' + rootProject.espressoVersion;
+
+
+    // Dagger 2
+    kapt "com.google.dagger:dagger-compiler:2.19"
+    kapt "com.google.dagger:dagger-android-processor:2.19"
+    implementation "com.google.dagger:dagger:2.19"
+    implementation "com.google.dagger:dagger-android:2.19"
+    implementation "com.google.dagger:dagger-android-support:2.19"
+
+}

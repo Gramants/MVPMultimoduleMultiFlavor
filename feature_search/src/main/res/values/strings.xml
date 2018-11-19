@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fruit And Vegs</string>
+    <string name="unknown_error">No results!</string>
+    <string name="search_title">Search</string>
+    <string name="title_search_result">fruit or veg to search</string>
+
+</resources>
